@@ -1,0 +1,8 @@
+Micro Instructions:
+Y1 = y1
+
+Micro Operations:
+y1  :  Arithmetic
+
+Logical Conditions:
+File 	 Draw
