@@ -1,0 +1,15 @@
+Micro Instructions:
+Y1 = y1 y2 y3
+Y2 = y4
+Y3 = y5 y6
+
+Micro Operations:
+y1  :  pc:=x"fffe"
+y2  :  ien:=0
+y3  :  r:=0
+y4  :  br2m1
+y5  :  mac:=x"fffe"
+y6  :  br:=pc
+
+Logical Conditions:
+File 	 Draw

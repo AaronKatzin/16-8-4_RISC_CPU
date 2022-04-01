@@ -1,0 +1,11 @@
+Micro Instructions:
+Y1 = y1
+
+Micro Operations:
+y1  :  r:=1
+
+Logical Conditions:
+File 	 Draw
+x1  : ien
+x2  : fgo
+x3  : fgi
