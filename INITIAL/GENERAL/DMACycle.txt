@@ -13,7 +13,7 @@ y1  :  m0_address:=ext_adr
 y2  :  ext_in:=m0[m0_address]
 y3  :  ext_in:=br
 y4  :  m1tobr
-y5  :  br2m1
+y5  :  BRtoM1
 y6  :  mac:=ext_adr
 y7  :  br:=ext_out
 y8  :  m0[m0_address]:=ext_out
