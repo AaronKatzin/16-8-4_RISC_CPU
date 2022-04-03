@@ -9,8 +9,8 @@ Y6 = y6
 Micro Operations:
 y1  :  m1tobr
 y2  :  ir2:=ir2+br
-y3  :  bor2br
-y4  :  bac:=ir1(3-0)
+y3  :  BORtoBR
+y4  :  mac:=ir1(3-0)
 y5  :  ir2:=br
 y6  :  mac:=ir2
 

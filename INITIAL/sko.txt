@@ -6,8 +6,8 @@ Y4 = y4
 Y5 = y5
 
 Micro Operations:
-y1  :  pc:=pc+1
-y2  :  IntCycle
+y1  :  IntCycle
+y2  :  pc:=pc+1
 y3  :  DMACycle
 y4  :  CheckInt
 y5  :  Fetch1

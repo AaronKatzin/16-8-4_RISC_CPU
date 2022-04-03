@@ -14,7 +14,7 @@ y3  :  BoRtoBR
 y4  :  IntCycle
 y5  :  DMACycle
 y6  :  CheckInt
-y7  :  bac:=ir1(7-4)
+y7  :  mac:=ir1(7-4)
 y8  :  Fetch1
 
 Logical Conditions:

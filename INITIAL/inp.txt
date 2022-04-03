@@ -12,7 +12,7 @@ y2  :  IntCycle
 y3  :  DMACycle
 y4  :  CheckInt
 y5  :  br:=inpr
-y6  :  bac:=ir1(7-4)
+y6  :  mac:=ir1(7-4)
 y7  :  fgi_reset:=1
 y8  :  Fetch1
 

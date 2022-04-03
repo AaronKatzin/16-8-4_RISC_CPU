@@ -16,7 +16,7 @@ Micro Operations:
 y1  :  mac:=ir2
 y2  :  IntCycle
 y3  :  DMACycle
-y4  :  bac:=ir1(3-0)
+y4  :  mac:=ir1(3-0)
 y5  :  BoRtoBR
 y6  :  M1toBR
 y7  :  pc:=ir2
