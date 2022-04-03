@@ -17,7 +17,7 @@ Y15 = y19
 
 Micro Operations:
 y1  :  br:=ralu
-y2  :  bac:=ir1(7-4)
+y2  :  mac:=ir1(7-4)
 y3  :  BRtoBoR
 y4  :  IntCycle
 y5  :  DMACycle
@@ -27,7 +27,7 @@ y8  :  alu_ctr:=ir1(15-11)
 y9  :  ralu:=alu
 y10  :  zf:=z
 y11  :  BoRtoBR
-y12  :  bac:=ir1(3-0)
+y12  :  mac:=ir1(3-0)
 y13  :  ir2:=br
 y14  :  M1toBR
 y15  :  mac:=ir2
