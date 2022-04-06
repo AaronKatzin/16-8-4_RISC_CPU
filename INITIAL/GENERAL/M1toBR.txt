@@ -7,11 +7,11 @@ Y5 = y2 y6
 
 Micro Operations:
 y1  :  mac:=mac+1
-y2  :  m1_address:=mac
-y3  :  br(3-0):=m1[m1_address]
-y4  :  br(7-4):=m1[m1_address]
-y5  :  br(15-12):=m1[m1_address]
-y6  :  br(11-8):=m1[m1_address]
+y2  :  m1_adr:=mac
+y3  :  br(3-0):=m1[m1_adr]
+y4  :  br(7-4):=m1[m1_adr]
+y5  :  br(15-12):=m1[m1_adr]
+y6  :  br(11-8):=m1[m1_adr]
 
 Logical Conditions:
 File 	 Draw

@@ -4,9 +4,9 @@ Y2 = y1 y3
 Y3 = y4
 
 Micro Operations:
-y1  :  m0_address:=mac
-y2  :  br(15-8):=m0[m0_address]
-y3  :  br(7-0):=m0[m0_address]
+y1  :  m0_adr:=mac
+y2  :  br(15-8):=m0[m0_adr]
+y3  :  br(7-0):=m0[m0_adr]
 y4  :  mac:=mac+1
 
 Logical Conditions:

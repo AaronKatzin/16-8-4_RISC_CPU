@@ -4,10 +4,10 @@ Y2 = y3
 Y3 = y1 y4
 
 Micro Operations:
-y1  :  m0_address:=pc
-y2  :  ir2(15-8):=m0[m0_address]
+y1  :  m0_adr:=pc
+y2  :  ir2(15-8):=m0[m0_adr]
 y3  :  pc:=pc+1
-y4  :  ir2(7-0):=m0[m0_address]
+y4  :  ir2(7-0):=m0[m0_adr]
 
 Logical Conditions:
 File 	 Draw
