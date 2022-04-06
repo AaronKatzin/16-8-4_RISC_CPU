@@ -2,7 +2,7 @@ Micro Instructions:
 Y1 = y1 y2
 
 Micro Operations:
-y1  :  BoR_address:=mac
+y1  :  BoR_address:=bac
 y2  :  BoR[BoR_address]:=br(15-0)
 
 Logical Conditions:

@@ -13,16 +13,16 @@ Y11 = y11
 Y12 = y12
 
 Micro Operations:
-y1  :  BRtoM1
-y2  :  IntCycle
-y3  :  DMACycle
-y4  :  CheckInt
-y5  :  BRtoBoR
-y6  :  mac:=ir1(3-0)
+y1  :  IntCycle
+y2  :  DMACycle
+y3  :  CheckInt
+y4  :  BRtoBoR
+y5  :  bac:=ir1(3-0)
+y6  :  BRtoM1
 y7  :  mac:=ir2
 y8  :  AbsAdr
 y9  :  Fetch2
-y10  :  mac:=ir1(7-4)
+y10  :  bac:=ir1(7-4)
 y11  :  BoRtoBR
 y12  :  Fetch1
 
