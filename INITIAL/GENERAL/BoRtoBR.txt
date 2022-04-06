@@ -2,8 +2,8 @@ Micro Instructions:
 Y1 = y1 y2
 
 Micro Operations:
-y1  :  BoR_address:=bac
-y2  :  br(15-0):=BoR[BoR_address]
+y1  :  BoR_adr:=bac
+y2  :  br(15-0):=BoR[BoR_adr]
 
 Logical Conditions:
 File 	 Draw
