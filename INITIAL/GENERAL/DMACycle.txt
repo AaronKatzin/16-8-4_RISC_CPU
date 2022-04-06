@@ -1,22 +1,20 @@
 Micro Instructions:
 Y1 = y1
-Y2 = y1 y2
+Y2 = y2
 Y3 = y3
 Y4 = y4
-Y5 = y5
-Y6 = y6 y7
-Y7 = y6
-Y8 = y1 y8
+Y5 = y1 y5
+Y6 = y6
+Y7 = y7
 
 Micro Operations:
-y1  :  m0_address:=ext_adr
-y2  :  ext_in:=m0[m0_address]
+y1  :  mac:=ext_adr
+y2  :  M0toBR
 y3  :  ext_in:=br
-y4  :  m1tobr
-y5  :  BRtoM1
-y6  :  mac:=ext_adr
-y7  :  br:=ext_out
-y8  :  m0[m0_address]:=ext_out
+y4  :  BRtoM0
+y5  :  br:=ext_out
+y6  :  M1toBR
+y7  :  BRtoM1
 
 Logical Conditions:
 File 	 Draw
