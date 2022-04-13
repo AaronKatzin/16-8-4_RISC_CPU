@@ -20,11 +20,11 @@ y3  :  bor_adr:=ir1(7-4)
 y4  :  bor[bor_adr]:=ralu
 y5  :  IntCycle
 y6  :  DMACycle
-y7  :  alu_in1:=br
-y8  :  alu_in2:=ir2
+y7  :  alu_inp1:=br
+y8  :  alu_inp2:=ir2
 y9  :  alu_ctr:=ir1(15-11)
-y10  :  ralu:=alu
-y11  :  zf:=z
+y10  :  ralu:=alu_outp
+y11  :  zf:=alu_z
 y12  :  br:=bor[bor_adr]
 y13  :  ir2:=br
 y14  :  M1toBR
