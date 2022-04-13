@@ -3,7 +3,7 @@ Y1 = y1
 Y2 = y2 y3
 
 Micro Operations:
-y1  :  ir2:=ir2+br
+y1  :  ir2:=ir2+br1
 y2  :  BoR_adr:=ir1(3-0)
 y3  :  br1:=BoR[BoR_adr]
 
