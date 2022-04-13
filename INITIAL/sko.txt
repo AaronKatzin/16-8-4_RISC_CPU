@@ -6,7 +6,7 @@ Y4 = y4
 Y5 = y5
 
 Micro Operations:
-y1  :  pc:=pc+x"0004";
+y1  :  pc:=pc+x"0004"
 y2  :  IntCycle
 y3  :  DMACycle
 y4  :  CheckInt
