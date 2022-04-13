@@ -1,0 +1,138 @@
+﻿<external_specifications xmlns="ExtSpec">
+    <essential_files>
+        <txt path="Funcmi_t.txt" />
+        <tab path="Structm.tab" />
+        <mrk path="Funcmi_t.mrk" />
+        <spec path="Funcmi_t.spec" />
+        <mux_files>
+            <mux path="funcmi_t16b-mux.xml" bits="16" />
+            <mux path="funcmi_t1b-mux.xml" bits="1" />
+            <mux path="funcmi_t4b-mux.xml" bits="4" />
+            <mux path="funcmi_t5b-mux.xml" bits="5" />
+            <mux path="funcmi_t8b-mux.xml" bits="8" />
+        </mux_files>
+    </essential_files>
+    <settings>
+        <bit_range direction="Down" />
+    </settings>
+    <dp_to_out_and_out_to_dp>
+        <signal name="clk" in_or_out="in" width="1" />
+        <signal name="rst" in_or_out="in" width="1" />
+        <signal name="ext_adr" in_or_out="in" width="16" />
+        <signal name="ext_in" in_or_out="out" width="16" />
+        <signal name="ext_out" in_or_out="in" width="16" />
+        <signal name="inpr" in_or_out="in" width="16" />
+        <signal name="outr" in_or_out="out" width="16" />
+    </dp_to_out_and_out_to_dp>
+    <additional />
+    <components>
+        <external>
+            <component path="COMPONENTS\alu.vhd" global="">
+                <class name="alu">
+                    <signal name="%name%_inp1" />
+                    <signal name="%name%_inp2" />
+                    <signal name="%name%_ctr" />
+                    <signal name="%name%_outp" />
+                    <signal name="%name%_z" />
+                </class>
+                <instances>
+                    <instance name="alu" />
+                </instances>
+            </component>
+        </external>
+        <automatic>
+            <generator type="d_ff" global="clk, rst">
+                <class>
+                    <signal name="%name%" />
+                    <signal name="%name%_en" />
+                    <signal name="%name%" />
+                </class>
+                <instances>
+                    <instance name="zf" />
+                </instances>
+            </generator>
+            <generator type="rsff" global="clk, rst">
+                <class>
+                    <signal name="%name%_reset" />
+                    <signal name="%name%_set" />
+                    <signal name="%name%" />
+                </class>
+                <instances>
+                    <instance name="ien" />
+                    <instance name="r" />
+                </instances>
+            </generator>
+            <generator type="register" global="clk, rst">
+                <class>
+                    <signal name="%name%" />
+                    <signal name="%name%_en" />
+                    <signal name="%name%" />
+                </class>
+                <instances>
+                    <instance name="br" />
+                    <instance name="br1" />
+                    <instance name="ir1" />
+                    <instance name="ir2" />
+                    <instance name="ralu" />
+                    <instance name="tempreg16_1" />
+                </instances>
+            </generator>
+            <generator type="bor" global="clk, rst">
+                <class>
+                    <signal name="%name%_adr" />
+                    <signal name="%name%[%name%_adr]" />
+                    <signal name="%name%_en" />
+                    <signal name="%name%[%name%_adr]" />
+                </class>
+                <instances>
+                    <instance name="bor" />
+                </instances>
+            </generator>
+            <generator type="ram" global="clk">
+                <class>
+                    <signal name="%name%_adr" />
+                    <signal name="%name%[%name%_adr]" />
+                    <signal name="%name%_rdwr" />
+                    <signal name="%name%[%name%_adr]" />
+                </class>
+                <instances>
+                    <instance name="m0" />
+                    <instance name="m1" />
+                </instances>
+            </generator>
+            <generator type="counter_p" global="clk, rst">
+                <class>
+                    <signal name="%name%_en" />
+                    <signal name="%name%_count" />
+                    <signal name="%name%" />
+                    <signal name="%name%" />
+                </class>
+                <instances>
+                    <instance name="mac" />
+                    <instance name="pc" />
+                </instances>
+            </generator>
+            <generator type="generic_comparator" global="clk, rst">
+                <class>
+                    <signal name="%name%_in1" />
+                    <signal name="%name%_in2" />
+                    <signal name="%name%_out" />
+                </class>
+                <instances>
+                    <instance name="comp4_1" />
+                </instances>
+            </generator>
+            <generator type="alu" global="clk, rst">
+                <class>
+                    <signal name="%name%_in1" />
+                    <signal name="%name%_in2" />
+                    <signal name="%name%_ctr" />
+                    <signal name="%name%_out" />
+                </class>
+                <instances>
+                    <instance name="alu16_1" />
+                </instances>
+            </generator>
+        </automatic>
+    </components>
+</external_specifications>
