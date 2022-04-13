@@ -8,26 +8,28 @@ Y6 = y6
 Y7 = y7
 Y8 = y8
 Y9 = y9
-Y10 = y10 y11
+Y10 = y10
+Y11 = y11 y12
 
 Micro Operations:
-y1  :  mac:=ir2
-y2  :  IntCycle
-y3  :  DMACycle
-y4  :  M1toBR
-y5  :  pc:=ir2
-y6  :  AbsAdr
-y7  :  Fetch2
-y8  :  CheckInt
-y9  :  Fetch1
-y10  :  bor_adr:=ir1(3-0)
-y11  :  pc:=bor[bor_adr]
+y1  :  pc:=br
+y2  :  mac:=ir2
+y3  :  IntCycle
+y4  :  DMACycle
+y5  :  M1toBR
+y6  :  pc:=ir2
+y7  :  AbsAdr
+y8  :  Fetch2
+y9  :  CheckInt
+y10  :  Fetch1
+y11  :  bor_adr:=ir1(3-0)
+y12  :  pc:=bor[bor_adr]
 
 Logical Conditions:
 File 	 Draw
 x1  : zf
 x2  : ir1(8)
 x3  : ir1(10)
-x4  : r
-x5  : dma
-x6  : s
+x4  : s
+x5  : r
+x6  : dma
