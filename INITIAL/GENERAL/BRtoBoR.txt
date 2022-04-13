@@ -1,9 +1,0 @@
-Micro Instructions:
-Y1 = y1 y2
-
-Micro Operations:
-y1  :  BoR_adr:=bac
-y2  :  BoR[BoR_adr]:=br(15-0)
-
-Logical Conditions:
-File 	 Draw

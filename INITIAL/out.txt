@@ -2,19 +2,18 @@ Micro Instructions:
 Y1 = y1 y2
 Y2 = y3
 Y3 = y4
-Y4 = y5
-Y5 = y6
-Y6 = y7
-Y7 = y8
+Y4 = y5 y6
+Y5 = y7
+Y6 = y8
 
 Micro Operations:
 y1  :  outr:=br
 y2  :  fgo_reset:=1
-y3  :  BoRtoBR
-y4  :  IntCycle
-y5  :  DMACycle
-y6  :  CheckInt
-y7  :  bac:=ir1(7-4)
+y3  :  IntCycle
+y4  :  DMACycle
+y5  :  bor_adr:=ir1(7-4)
+y6  :  br:=bor[bor_adr]
+y7  :  CheckInt
 y8  :  Fetch1
 
 Logical Conditions:

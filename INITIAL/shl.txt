@@ -1,33 +1,31 @@
 Micro Instructions:
 Y1 = y1 y2
-Y2 = y3
-Y3 = y4
-Y4 = y5
-Y5 = y6 y7 y8 y9 y10
-Y6 = y11
-Y7 = y2
-Y8 = y12
-Y9 = y13
-Y10 = y14
-Y11 = y15
-Y12 = y16
-Y13 = y17
-Y14 = y18
-Y15 = y19
+Y2 = y3 y4
+Y3 = y5
+Y4 = y6
+Y5 = y7 y8 y9 y10 y11
+Y6 = y3 y12
+Y7 = y13
+Y8 = y14
+Y9 = y15
+Y10 = y16
+Y11 = y17
+Y12 = y18
+Y13 = y19
 
 Micro Operations:
-y1  :  br:=ralu
-y2  :  bac:=ir1(7-4)
-y3  :  BRtoBoR
-y4  :  IntCycle
-y5  :  DMACycle
-y6  :  alu_in1:=br
-y7  :  alu_in2:=ir2
-y8  :  alu_ctr:=ir1(15-11)
-y9  :  ralu:=alu
-y10  :  zf:=z
-y11  :  BoRtoBR
-y12  :  bac:=ir1(3-0)
+y1  :  bor_adr:=ir1(3-0)
+y2  :  ir2:=bor[bor_adr]
+y3  :  bor_adr:=ir1(7-4)
+y4  :  bor[bor_adr]:=ralu
+y5  :  IntCycle
+y6  :  DMACycle
+y7  :  alu_in1:=br
+y8  :  alu_in2:=ir2
+y9  :  alu_ctr:=ir1(15-11)
+y10  :  ralu:=alu
+y11  :  zf:=z
+y12  :  br:=bor[bor_adr]
 y13  :  ir2:=br
 y14  :  M1toBR
 y15  :  mac:=ir2
