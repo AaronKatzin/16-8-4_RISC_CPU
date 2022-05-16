@@ -1,0 +1,38 @@
+AdrA: x"0000"
+
+; Test lod immediate
+lod r0, #x"0008"; r0 := x"0008"
+out r0			; r0 == x"0008";
+
+; Test str short direct
+lod rC, #x"EEEE"; rC := x"EEEE"
+lod r4, #x"0004"; r4 := x"0004"
+str r4, rC		; rC := r4 = x"0004"
+out rC			; rC == x"0004";
+
+;Test lod/str long direct indexed 
+lod r0, #x"EEEE";
+lod r8, #x"1234";
+lod rC, #x"0004";
+str r8, AdrA, rC ; M1[ AdrA + rC =x"0004" ]:= r8 , r8= x"1234" ,M1[x"0004"]=x"1234", AdrA=x"0000"
+lod r0, AdrA, rC ; r0 := M1[x"0004"] = x"1234"
+out r0; r0 == x"1234";
+
+; Test bun immediate
+lod rC, #x"0001";
+bun #Bun_imd ;
+sub rC,rC; rC:= rC -rC =0, shouldn't be performed @test_skip@
+Bun_imd:
+inc rC; rC:= rC + 1; rC should be x"0002" after execution of command 
+out rC ; rC==x"0002"
+
+;Test bun long direct indexed
+lod r4, #x"0004";
+lod r8, #Bun_long_direct_indexed
+str r8, AdrA, r4 ; M1[x"0004"] = M1[ AdrA + x"0004"]:= r8 , r8= #Bun_long_direct_indexed ,AdrA=x"0000" => M1[4]=#Bun_long_direct_indexed
+bun AdrA, r4
+sub rC,rC; rC:= rC -rC =0, shouldn't be performed @test_skip@
+Bun_long_direct_indexed:
+inc rC; rC:= rC + 1; rC should be x"0003" after execution of command 
+out rC ; rC==x"0003"
+
